@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 3 Months Anniversary Aastha ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Poppins,sans-serif;background:linear-gradient(135deg,#ffd1dc,#ffb6c1);overflow-x:hidden}
+.page{min-height:100vh;display:none;padding:40px;justify-content:center;align-items:center;flex-direction:column;text-align:center;position:relative;z-index:2;box-sizing:border-box}
+.active{display:flex}
+h1,h2{font-family:"Dancing Script",cursive}
+h1{font-size:4rem;color:#d6336c}
+h2{font-size:3rem;color:#d6336c}
+.card{background:rgba(255,255,255,.75);max-width:900px;padding:30px;border-radius:25px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.btn{padding:14px 30px;border:none;border-radius:30px;background:#ff4d88;color:white;font-size:1.1rem;cursor:pointer}
+.flowers{font-size:2rem}
+.gallery img{max-width:90%;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.2)}
+
+/* Hearts background container */
+#hearts-container {position:fixed;top:0;left:0;width:100vw;height:100vh;overflow:hidden;z-index:1;pointer-events:none}
+.heart{position:absolute;color:#ff5c8a;animation:fall linear infinite}
+@keyframes fall{from{transform:translateY(-100px)}to{transform:translateY(110vh)}}
+
+#finalMessage{font-size:3rem;color:#d6336c;font-family:"Dancing Script",cursive}
+.confetti{position:fixed;width:10px;height:10px;animation:drop 3s linear forwards;z-index:3}
+@keyframes drop{to{transform:translateY(110vh) rotate(720deg)}}
+</style>
+</head>
+<body>
+
+<div id="hearts-container"></div>
+
+<div class="page active" id="p1">
+<div class="card">
+<div class="flowers">🌸🌷🌹🌸🌷</div>
+<h1>Happy 3 Months Anniversary Aastha ❤️</h1>
+<p>From Pratham, with all my love.</p>
+<button class="btn" onclick="show(2)">Continue</button>
+</div>
+</div>
+
+<div class="page" id="p2">
+<div class="card">
+<h2>Our Story 📖</h2>
+<p><b>Memory 1</b><br>
+The first time I felt love for you was beautiful. It felt like I had finally found someone who made feel loved and wanted. You became a source of happiness in my life. Talking to you was always the best part of my day. Sharing things with you, even our small and childish fights, became memories that I cherish. I love every little thing about you—your childish behavior, your care, and the love you give me.</p>
+
+<p><b>Memory 2</b><br>
+My favorite memory of us is, without a doubt, my birthday. I spent the whole day with you, and I still remember the moment I saw you. You looked so worried, and when we met, you hugged me so tightly that I was completely shocked and melted at the same time. We spent the day together, ate together, and I enjoyed every second of it. The hardest part of that day was leaving you after spending so much time together. It remains one of my most treasured memories.</p>
+
+<button class="btn" onclick="show(3)">Continue</button>
+</div>
+</div>
+
+<div class="page" id="p3">
+<div class="card gallery">
+<h2>Our Memories 📸</h2>
+<img src="collage.jpg" alt="Our Memories">
+<p>Some of my favorite moments with you ❤️</p>
+<button class="btn" onclick="show(4)">Continue</button>
+</div>
+</div>
+
+<div class="page" id="p4">
+<div class="card">
+<h2>What I Feel About You ❤️</h2>
+<p>
+I absolutely don't need any reason to love you, but the way you care for me, the love you give me, and the worry you show for me touches me deeply. Your eyes are one of the most beautiful things I have ever seen, and your smile brings warmth to my heart. You are one of the purest and kindest people in my life, and probably the sweetest too. I genuinely love everything about you. Even though I believe nobody is perfect, I never find myself looking for flaws in you. I once decided I would never cry for a girl, but the moment I cried because of you, I realized how much I truly love you.
+</p>
+<button class="btn" onclick="show(5)">Continue</button>
+</div>
+</div>
+
+<div class="page" id="p5">
+<div class="card">
+<h2>Letter To Aastha 💌</h2>
+<p>
+Aastha, I know I may not be perfect, but I will always try my best and become better for you. I will give you all the love and care you deserve. I will do everything I can to keep you happy, because seeing you sad is something I never like. I just want you to be the happiest person possible.
+
+I pray to God that you achieve everything you deserve in life. I know things have been difficult at times, but I truly believe my Aastha is strong and capable of overcoming every challenge. I will support you in every stage of your life, in every dream and every struggle. I hope you make everyone proud, because I know you can.
+
+I will keep working hard too, and I want to see both of us grow together. I don't know what the future holds, but what I know right now is that I want you in my life, and I want to be with you for as long as life allows.
+
+Happy 3 Months, my love. ❤️
+</p>
+<button class="btn" onclick="goToFinalPage()">Final Surprise ❤️</button>
+</div>
+</div>
+
+<div class="page" id="p6">
+<div class="card">
+<h2>1 March 2026 → 3 Beautiful Months ❤️</h2>
+<div id="finalMessage">🎉 Happy Anniversary Babe ❤️<br>Love, Pratham 🌹</div>
+</div>
+</div>
+
+<script>
+function show(n){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById('p'+n).classList.add('active');
+}
+
+function goToFinalPage(){
+show(6);
+celebrate();
+}
+
+// Generate background hearts inside the dedicated container
+const heartsContainer = document.getElementById('hearts-container');
+for(let i=0;i<40;i++){
+let h=document.createElement('div');
+h.className='heart';
+h.innerHTML='❤';
+h.style.left=Math.random()*100+'vw';
+h.style.fontSize=(15+Math.random()*20)+'px';
+h.style.animationDuration=(5+Math.random()*5)+'s';
+h.style.animationDelay=Math.random()*5+'s';
+heartsContainer.appendChild(h);
+}
+
+function celebrate(){
+for(let i=0;i<250;i++){
+let c=document.createElement('div');
+c.className='confetti';
+c.style.left=Math.random()*100+'vw';
+c.style.background='hsl('+Math.random()*360+',100%,50%)';
+c.style.animationDuration=(2+Math.random()*2)+'s';
+document.body.appendChild(c);
+}
+}
+</script>
+</body>
+</html>
